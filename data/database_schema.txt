@@ -1,3 +1,25 @@
-SQLite version 3.38.2 2022-03-26 13:51:10
-Enter ".help" for usage hints.
-sqlite> 
+CREATE TABLE IF NOT EXISTS "yelp_table" (
+"index" INTEGER,
+  "name" TEXT,
+  "review_count" INTEGER,
+  "rating" REAL,
+  "categories" TEXT,
+  "price_level" REAL,
+  "address" TEXT,
+  "city" TEXT,
+  "postal_code" TEXT,
+  "latitude" REAL,
+  "longitude" REAL
+);
+CREATE INDEX "ix_yelp_table_index"ON "yelp_table" ("index");
+CREATE TABLE IF NOT EXISTS "fs_table" (
+"index" INTEGER,
+  "name" TEXT,
+  "categories" TEXT,
+  "address" TEXT,
+  "city" TEXT,
+  "postal_code" TEXT,
+  "latitude" REAL,
+  "longitude" REAL
+);
+CREATE INDEX "ix_fs_table_index"ON "fs_table" ("index");
